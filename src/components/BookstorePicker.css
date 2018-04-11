@@ -1,0 +1,49 @@
+.BookstorePicker {
+  margin: 5vh auto;
+  text-align: center;
+}
+
+.BookstorePicker form {
+  border: 1px solid black;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  max-width: 320px;
+  padding: 0 20px 20px 20px;
+}
+
+.header {
+  align-items: center;
+  display: flex;
+  margin: 5vh auto;
+  max-width: 800px;
+  min-height: 10vh;
+}
+
+.logo {
+  filter: grayscale(100%);
+  flex: 1;
+  margin-left: 1%;
+}
+
+.header h1 {
+  flex: 3;
+  font-family: "Niconne";
+  font-size: 10vw;
+}
+
+.textInput {
+  background-color: #eee;
+  border: none;
+  margin-right: 5px;
+  padding: 5px;
+}
+
+.submitButton {
+  background-color: #eee;
+  border: none;
+  padding: 5px;
+}
+
+.submitButton:hover {
+  background-color: #ddd;
+}
