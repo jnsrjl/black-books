@@ -14,21 +14,20 @@
 .header {
   align-items: center;
   display: flex;
-  margin: 5vh auto;
+  justify-content: center;
+  margin: 0 auto;
   max-width: 800px;
   min-height: 10vh;
 }
 
 .logo {
-  filter: grayscale(100%);
-  flex: 1;
   margin-left: 1%;
+  max-width: 20vw;
 }
 
 .header h1 {
-  flex: 3;
   font-family: "Niconne";
-  font-size: 10vw;
+  font-size: 8vw;
 }
 
 .textInput {

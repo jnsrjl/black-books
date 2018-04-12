@@ -1,0 +1,26 @@
+.FourOhFour {
+  font-size: 20vh;
+  height: 100vh;
+  overflow: hidden;
+  text-align: center;
+  width: 100vw;
+}
+
+.FourOhFour h1 {
+  margin: 0;
+}
+
+.FourOhFour p {
+  margin: 0;
+}
+
+.button {
+  background-color: #ffd33f;
+  color: white;
+  font-size: 10vh;
+  padding: 10px 20px;
+}
+
+.button:hover {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}

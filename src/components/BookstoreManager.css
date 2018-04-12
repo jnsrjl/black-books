@@ -1,0 +1,16 @@
+h2 {
+  border-bottom: 2px solid #000;
+}
+
+.BookstoreManager {
+  display: flex;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+.BookstoreManager > * {
+  border: 2px solid #111;
+  flex: 1;
+  overflow: scroll;
+  padding-left: 1%;
+}
