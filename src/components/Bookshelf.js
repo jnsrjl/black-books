@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./Bookshelf.css";
-import book from "./book.svg";
 
 class Bookshelf extends Component {
   render() {
