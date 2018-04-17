@@ -4,6 +4,7 @@ import "./AddBook.css";
 class AddBook extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
       title: "",
       price: 0.0,
@@ -22,61 +23,76 @@ class AddBook extends Component {
     });
   };
 
+  handleSubmit = e => {
+    // Prevent window reload
+    e.preventDefault();
+
+    // TODO: Validation
+    const newBook = {
+      title: this.state.title,
+      price: this.state.price,
+      availability: this.state.availability,
+      description: this.state.description,
+      image: this.state.image
+    };
+
+    this.props.onAddBookSubmit(newBook);
+
+    this.setState({
+      title: "",
+      price: 0.0,
+      availability: "",
+      description: "",
+      image: ""
+    });
+  };
+
   render() {
     return (
-      <form className="AddBook">
+      <form className="AddBook" onSubmit={this.handleSubmit}>
         <input
-          required
-          type="text"
           name="title"
-          placeholder="Book Title"
           onChange={this.handleInputChange}
+          placeholder="Book Title"
+          type="text"
+          value={this.state.title}
         />
         <input
           className="price"
+          min="0"
           name="price"
-          required
-          type="number"
+          onChange={this.handleInputChange}
           placeholder="Book Price (€)"
           step="0.01"
-          min="0"
-          onChange={this.handleInputChange}
+          type="number"
+          value={this.state.price}
         />
         <select
           name="availability"
-          value={this.state.availability}
           onChange={this.handleInputChange}
+          value={this.state.availability}
         >
           <option value="inStock">In Stock</option>
           <option value="releasedSoon">Released Soon!</option>
         </select>
         <textarea
-          name="description"
           maxLength="140"
           minLength="1"
-          placeholder="Book Description"
-          required
-          rows="4"
+          name="description"
           onChange={this.handleInputChange}
+          placeholder="Book Description"
+          rows="4"
+          value={this.state.description}
         />
         <span>0</span>
         <input
-          required
-          type="text"
           name="image"
-          placeholder="Book Image"
           onChange={this.handleInputChange}
+          placeholder="Book Image"
+          type="text"
+          value={this.state.image}
         />
-        <button required type="submit">
-          + Add Book
-        </button>
-        <ul>
-          <li>{this.state.title}</li>
-          <li>{this.state.price}</li>
-          <li>{this.state.availability}</li>
-          <li>{this.state.description}</li>
-          <li>{this.state.image}</li>
-        </ul>
+        <button type="submit">+ Add Book</button>
       </form>
     );
   }
