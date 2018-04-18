@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Book from "./Book";
 import "./Bookshelf.css";
 
 class Bookshelf extends Component {
@@ -6,6 +7,11 @@ class Bookshelf extends Component {
     return (
       <div className="Bookshelf">
         <h2>Bookshelf</h2>
+        <ul className="booklist">
+          {this.props.books.map((book, index) => (
+            <Book details={book} index={index} />
+          ))}
+        </ul>
       </div>
     );
   }

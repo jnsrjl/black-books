@@ -7,6 +7,7 @@ class AddBook extends Component {
 
     this.state = {
       title: "",
+      author: "",
       price: 0.0,
       availability: "releasedSoon",
       description: "",
@@ -30,6 +31,7 @@ class AddBook extends Component {
     // TODO: Validation
     const newBook = {
       title: this.state.title,
+      author: this.state.author,
       price: this.state.price,
       availability: this.state.availability,
       description: this.state.description,
@@ -40,6 +42,7 @@ class AddBook extends Component {
 
     this.setState({
       title: "",
+      author: "",
       price: 0.0,
       availability: "",
       description: "",
@@ -56,6 +59,13 @@ class AddBook extends Component {
           placeholder="Book Title"
           type="text"
           value={this.state.title}
+        />
+        <input
+          name="author"
+          onChange={this.handleInputChange}
+          placeholder="Book Author"
+          type="text"
+          value={this.state.author}
         />
         <input
           className="price"

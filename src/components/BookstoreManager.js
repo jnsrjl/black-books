@@ -3,32 +3,18 @@ import "./BookstoreManager.css";
 import Storage from "./Storage";
 import Bookshelf from "./Bookshelf";
 import Order from "./Order";
+import { sampleBooks } from "../helpers/sampleBooks";
 
 class BookstoreManager extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      books: [
-        {
-          title: "Harry Potter And The Philosopher's Stone",
-          price: 35.9,
-          availability: "inStock",
-          description: "Harry is an ordinary boy...",
-          image: "noImage"
-        },
-        {
-          title: "Harry Potter And The Philosopher's Stone",
-          price: 35.9,
-          availability: "inStock",
-          description: "Harry is an ordinary boy...",
-          image: "noImage"
-        }
-      ]
+      books: sampleBooks
     };
   }
 
   handleAddBookSubmit = book => {
-    // Note that the books goes on top of the array
+    // Note that the new book goes at the start of the array
     this.setState(prevState => ({
       books: [book, ...prevState.books]
     }));
@@ -41,7 +27,7 @@ class BookstoreManager extends Component {
           books={this.state.books}
           onAddBookSubmit={this.handleAddBookSubmit}
         />
-        <Bookshelf />
+        <Bookshelf books={this.state.books} />
         <Order />
       </div>
     );
