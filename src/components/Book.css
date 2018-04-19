@@ -1,3 +1,11 @@
+.header {
+  justify-content: left;
+}
+
 .image {
   max-width: 100px;
+}
+
+.author {
+  color: var(--primary);
 }

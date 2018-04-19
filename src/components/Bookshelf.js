@@ -9,7 +9,7 @@ class Bookshelf extends Component {
         <h2>Bookshelf</h2>
         <ul className="booklist">
           {this.props.books.map((book, index) => (
-            <Book details={book} index={index} />
+            <Book details={book} key={index} />
           ))}
         </ul>
       </div>

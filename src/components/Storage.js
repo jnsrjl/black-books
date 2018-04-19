@@ -11,7 +11,7 @@ class Storage extends Component {
         <AddBook onAddBookSubmit={this.props.onAddBookSubmit} />
         <ul className="booklist">
           {this.props.books.map((book, index) => (
-            <Book details={book} index={index} />
+            <Book details={book} key={index} />
           ))}
         </ul>
       </div>
