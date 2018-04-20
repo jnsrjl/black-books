@@ -102,7 +102,9 @@ class AddBook extends Component {
           type="text"
           value={this.state.image}
         />
-        <button type="submit">+ Add Book</button>
+        <button className="submit-button" type="submit">
+          + Add Book
+        </button>
       </form>
     );
   }

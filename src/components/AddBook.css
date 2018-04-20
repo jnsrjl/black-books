@@ -5,8 +5,7 @@
 
 input,
 select,
-textarea,
-button {
+textarea {
   background-color: #eee;
   border: none;
   margin: 6px 0;
@@ -22,11 +21,14 @@ select {
   margin-right: 4%;
 }
 
-button {
-  max-width: 120px;
+.submit-button {
+  background-color: var(--primary);
+  border: none;
+  margin-top: 6px;
   padding: 5px 10px;
 }
 
-button:hover {
+.submit-button:hover {
   background-color: #ddd;
+  cursor: pointer;
 }

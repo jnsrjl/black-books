@@ -33,7 +33,7 @@ class BookstorePicker extends Component {
       <div className="BookstorePicker" onSubmit={this.handleSubmit}>
         <header className="header">
           <img src={book} className="logo" alt="logo" />
-          <h1>Black Books</h1>
+          <h1 className="fancy-type">Black Books</h1>
         </header>
         <form className="form">
           <h2>Please Enter A Bookstore</h2>
